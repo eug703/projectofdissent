@@ -65,14 +65,15 @@ module.exports = function(app) {
         });
 
         app.get('/jobs/search', function(req, res){
-            var {term} = req.query
-    
+            var term = req.body
             db.Jobs.findAll({
                 where:{
-                    technologies: term
+                    technologies: { 
+                        [Op.like]: '%' + term + '%'
+                    }
                 }
             }).then(function(results){
-                res.render('allJobs', {results})
+                res.render('allJobs', results)
             })
         })
 

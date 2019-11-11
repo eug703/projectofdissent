@@ -1,0 +1,23 @@
+#techSearch{
+    text-align: center;
+}
+
+#allJobs, #addJobs, #add{
+    text-align: center;
+}
+
+.display-4{
+    text-align: center;
+}
+
+#nav, #techSearch, #addJobs, #hardLine{
+    color: lime;
+}
+
+#navBar1, #techSearch, #addJobs{
+    background-color: black;
+}
+
+body{
+    background-image: url(/img/coding.jpeg);
+}
