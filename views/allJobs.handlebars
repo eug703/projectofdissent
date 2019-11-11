@@ -1,28 +1,29 @@
 
 
-<section id="gigs" class="container">
-    <h1>All Jobs</h1>
-
-
+<div class="container">
+    <div class="row">
+        <div class="col-11">
+            <div class="jumbotron jumbotron-fluid" id="techSearch">
+    <h1 id="allJobs">All Jobs</h1>
+    <hr>
 {{#each jobs}}
-    <div class="gig">
+    <div class="job">
     <h3>{{title}}</h3>
     <p>{{description}}</p>
     <ul>
-        <li>Budget: {{budget}}</li>
-        <li><a href="mailto:{{email}}" class="btn btn-reverse">Apply Now</a></li>
+        <li>Technologies Needed: <span>{{technologies}}</span></li>
+        <li>Salary: {{budget}}</li>
+        <li><a href="mailto:{{email}}" id="techSearch" class="btn btn-reverse">Apply Now</a></li>
+        
     </ul>
-    <div class="tech">
-        <small>Technologies Needed: <span>{{technologies}}</span></small>
     </div>
-    </div>
-
+    <br>
+    <br>
 {{else}}
     <p>No jobs at this time</p>
 {{/each}}
+</div>
+        </div>
+    </div>
+</div>
 
-
-</section>
-</body>
-
-</html>
